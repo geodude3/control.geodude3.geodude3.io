@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Control</title>
+        <script>
+            addEventListener('DOMContentLoaded',()=>{
+                document.querySelector('#on/off').onclick = function (){
+
+                    if(document.querySelector('#on/off').innerHTML == 'Om'){
+                        document.querySelector('#on/off').innerHTML = 'Off';
+                    }else if(document.querySelector('#on/off').innerHTML == 'Off'){
+                        document.querySelector('#on/off').innerHTML = 'On';
+                    }
+                
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <button id="on/off">On</button>
+    </body>
+</html>
