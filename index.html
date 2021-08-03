@@ -4,19 +4,43 @@
         <title>Control</title>
         <script>
             addEventListener('DOMContentLoaded',()=>{
-                document.querySelector('#on/off').onclick = function (){
+                var switchS = 0;
+                document.querySelector('#switch').onclick = function (){
 
-                    if(document.querySelector('#on/off').innerHTML == 'Om'){
-                        document.querySelector('#on/off').innerHTML = 'Off';
-                    }else if(document.querySelector('#on/off').innerHTML == 'Off'){
-                        document.querySelector('#on/off').innerHTML = 'On';
+                    if(switchS === 0){
+                        document.querySelector('#switch').innerHTML = 'Off';
+                        switchS = 1;
+                    }else if(switchS === 1){
+                        document.querySelector('#switch').innerHTML = 'On';
+                        switchS = 0;
                     }
-                
+            
                 }
+                document.querySelector('#contact').onclick = function (){
+                    window.open('mailto:inaya.salari@gmail.com');
+
+                }
+                
             })
         </script>
+        <style>
+            button{
+                
+                background-color: orange;
+                padding: 10px 30px;
+                margin: 20px 30px;
+                border-color: black;
+                font-size: 24px;
+                font-family: Arial; 
+            }
+            
+            button:hover{
+                background-color: darkorange;
+            }
+        </style>
     </head>
     <body>
-        <button id="on/off">On</button>
+        <button id="switch">On</button>
+        <button id="contact">Contact</button>
     </body>
 </html>
